@@ -5,6 +5,10 @@ import Head from "next/head";
 const Home: NextPage = (props) => {
   const { data: session } = useSession();
 
+  if(session) {
+    console.log(session.user);
+  }
+
   return (
     <div className="h-screen">
       <Head>
